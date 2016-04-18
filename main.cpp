@@ -1,5 +1,3 @@
-#define GLEW_STATIC
-#include <GL/glew.h>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics.hpp>

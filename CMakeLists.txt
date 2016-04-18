@@ -15,7 +15,7 @@ project(openglproject)
 
 include_directories(${PROJECT_BINARY_DIR})
 
-set(EXECUTABLE_NAME "openglexec")
+set(EXECUTABLE_NAME "joystickexec")
 add_executable(${EXECUTABLE_NAME} main.cpp)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" ${CMAKE_MODULE_PATH})
@@ -25,17 +25,7 @@ MESSAGE(${CMAKE_MODULE_PATH})
 find_package(SFML 2.1 REQUIRED system window graphics network audio)
 #include_directories(${SFML_INCLUDE_DIR})
 
-#OpenGL
-find_package(OpenGL REQUIRED)
-include_directories(${OpenGL_INCLUDE_DIRS})
-link_directories(${OpenGL_LIBRARY_DIRS})
-add_definitions(${OpenGL_DEFINITIONS})
-
-#Glew
-find_package(GLEW REQUIRED)
-include_directories(${GLEW_INCLUDE_DIRECTORIES})
-
-target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
+target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES}) 
 
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
 

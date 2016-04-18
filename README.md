@@ -10,7 +10,5 @@ Steps to build and run:
 * cd build
 * cmake ..
 * make
-* ./openglexec
-
-Yes, the executable is still named openglexec at the moment.
+* ./joystickexec
 
